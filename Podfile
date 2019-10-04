@@ -9,6 +9,7 @@ target 'Contacts' do
 	pod 'SwiftGen'
   pod 'Moya'
   pod 'SwiftMessages'
+  pod 'Kingfisher'
 
 
 

@@ -30,6 +30,7 @@ class ContactsListViewController: UIViewController, UITableViewDataSource, UITab
         super.viewWillAppear(animated)
 
 
+//netowrk call refactored
         let baseUrl = Environment.rootURL
         let url = URL.init(string: baseUrl + "/contacts.json")!
 
@@ -101,7 +102,7 @@ class ContactsListViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell") as! ContactCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactsCell") as! ContactsCell
 
 
         let contact = contactListSections[indexPath.section].contacts[indexPath.row]
@@ -137,7 +138,7 @@ class ContactsListViewController: UIViewController, UITableViewDataSource, UITab
     }
 }
 
-class ContactCell: UITableViewCell {
+class ContactsCell: UITableViewCell {
 
     @IBOutlet weak var contactPhotoView: UIImageView!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -157,6 +158,8 @@ class ContactCell: UITableViewCell {
     }
 }
 
+
+//refactored
 struct Contacts: Decodable {
     let id: Int?
     let firstName: String?

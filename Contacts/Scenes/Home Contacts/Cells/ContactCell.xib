@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="73" id="h1h-Pm-fdh" customClass="ContactCell" customModule="Contacts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h1h-Pm-fdh" id="yMx-kI-rpb">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="placeholder_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="20e-mg-a9q">
+                        <rect key="frame" x="16" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="May-Iu-Aw2"/>
+                            <constraint firstAttribute="width" secondItem="20e-mg-a9q" secondAttribute="height" multiplier="1:1" id="xyE-Ok-7WN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="253" image="home_favourite.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Hp-c0-7dC">
+                        <rect key="frame" x="286" y="23" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4Hp-c0-7dC" secondAttribute="height" multiplier="1:1" id="C7X-0K-m1A"/>
+                            <constraint firstAttribute="width" constant="18" id="PsQ-E6-2Lj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fr-ao-NG3">
+                        <rect key="frame" x="72" y="23.5" width="198" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="20e-mg-a9q" firstAttribute="leading" secondItem="yMx-kI-rpb" secondAttribute="leading" constant="16" id="04x-9Z-p1b"/>
+                    <constraint firstItem="7fr-ao-NG3" firstAttribute="leading" secondItem="20e-mg-a9q" secondAttribute="trailing" constant="16" id="1w3-5O-3hV"/>
+                    <constraint firstItem="7fr-ao-NG3" firstAttribute="centerY" secondItem="20e-mg-a9q" secondAttribute="centerY" id="4h9-fd-2n8"/>
+                    <constraint firstItem="20e-mg-a9q" firstAttribute="top" secondItem="yMx-kI-rpb" secondAttribute="top" constant="12" id="4s0-vv-hst"/>
+                    <constraint firstAttribute="trailing" secondItem="4Hp-c0-7dC" secondAttribute="trailing" constant="16" id="Hrp-SI-HW1"/>
+                    <constraint firstItem="4Hp-c0-7dC" firstAttribute="leading" secondItem="7fr-ao-NG3" secondAttribute="trailing" constant="16" id="ItK-9m-87k"/>
+                    <constraint firstItem="4Hp-c0-7dC" firstAttribute="centerY" secondItem="20e-mg-a9q" secondAttribute="centerY" id="RK2-a6-qAe"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="20e-mg-a9q" secondAttribute="bottom" constant="12" id="Wun-j8-1iL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contactFavouriteImageView" destination="4Hp-c0-7dC" id="hxm-2R-4cM"/>
+                <outlet property="contactNameLabel" destination="7fr-ao-NG3" id="UMZ-CO-VCN"/>
+                <outlet property="contactPhotoView" destination="20e-mg-a9q" id="LE2-sy-jDW"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home_favourite.png" width="16" height="16"/>
+        <image name="placeholder_photo.png" width="16" height="16"/>
+    </resources>
+</document>

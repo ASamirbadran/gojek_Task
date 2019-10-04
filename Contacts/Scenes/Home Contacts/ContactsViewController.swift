@@ -34,6 +34,7 @@ extension ContactsViewController {
         //getting contactList
         presenter?.getContacts()
         setupNavigationBar(title: "Contacts")
+        setupContactsTableView()
     }
 }
 
@@ -49,10 +50,66 @@ extension ContactsViewController {
 
 // MARK: - Private
 extension ContactsViewController {
+    func setupContactsTableView() {
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+        contactsTableView.register(
+            UINib (nibName: ContactCell.className, bundle: Bundle(for: ContactCell.self)),
+            forCellReuseIdentifier: ContactCell.className)
+        
+        contactsTableView.separatorStyle = .none
+    }
 
 }
 
 // MARK: - Protocal
 extension ContactsViewController: ContactsViewProtocol {
+    func reloadData() {
+        contactsTableView.reloadData()
+    }
+    
 
+}
+
+extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter?.contactTableData.count ?? 0
+     }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.contactTableData[section].contacts.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if presenter?.contactTableData[section].contacts.count == 0 {
+            return nil
+        }
+        return presenter?.contactTableData[section].sectionTitle
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return presenter?.contactTableData.compactMap({ $0.sectionTitle })
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let data = contactListSections[indexPath.section].contacts[indexPath.row]
+//
+//        selectedContactURL = data.url as! String
+//        performSegue(withIdentifier: "viewContact", sender: nil)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ContactCell.className,
+            for: indexPath) as? ContactCell else {
+                fatalError("ContactCell fatal error")
+        }
+        presenter?.configure(cell: cell, sectionIndex: indexPath.section, rowIndex: indexPath.row)
+        return cell
+    }
+    
+    
 }

@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import UIKit //TEST FOR NOW ------
 
 class ContactsPresenter: NSObject {
 
     private weak var view: ContactsViewProtocol?
     internal var interactor: ContactsInteractorInputProtocol?
     private var router: ContactsWireframeProtocol?
+    var contactaListViewModels = [ContactViewModel] ()
+    
+    var contactTableSections: [ContactTableSection] = []
+
 
     init(interface: ContactsViewProtocol,
          interactor: ContactsInteractorInputProtocol?,
@@ -24,21 +29,57 @@ class ContactsPresenter: NSObject {
 
 }
 extension ContactsPresenter: ContactsPresenterProtocol {
+    func configure(cell: ContactCellView, sectionIndex: Int, rowIndex: Int) {
+        let contactEntryViewModel = contactTableSections[sectionIndex].contacts[rowIndex]
+        cell.configureContactCell(viewModel: contactEntryViewModel, sectionIndex: sectionIndex, rowIndex: rowIndex)
+        cell.setDelegate(delegate: self)
+    }
+    
+    var contactTableData: [ContactTableSection] {
+        return contactTableSections
+    }
+    
     func getContacts() {
         view?.showLoadingIndicator?()
         interactor?.fetchContacts()
+    }
+    func mapContactsToViewModel(contactList: [Contact]) {
+        self.contactaListViewModels = contactList.map { (contact) -> ContactViewModel in
+            let viewModel = ContactViewModel(contact: contact)
+            return viewModel
+        }
+        
+        //arrange conatct into sections
+        mapDataToSections(contactListViewModels: contactaListViewModels)
+    }
+    func mapDataToSections(contactListViewModels: [ContactViewModel]) {
+        let sortedContacts = contactListViewModels.sorted(by: { $0.fullName < $1.fullName })
+
+        let sectionTitles = UILocalizedIndexedCollation.current().sectionTitles
+
+        var calculatingSections: [ContactTableSection] = []
+
+        for title in sectionTitles {
+            let contacts = sortedContacts.filter({ $0.fullName.capitalized.hasPrefix(title)})
+            let section = ContactTableSection(sectionTitle: title, contacts: contacts)
+            calculatingSections.append(section)
+        }
+        self.contactTableSections = calculatingSections
+        view?.reloadData()
     }
 }
 extension ContactsPresenter: ContactsInteractorOutputProtocol {
     func contactFetchedSuccessfully(contactList: [Contact]) {
         view?.hideLoadingIndicator?()
-        print(contactList)
+        mapContactsToViewModel(contactList: contactList)
     }
     
     func errorFetchingContacts(title: String, errorMessage: String) {
         view?.hideLoadingIndicator?()
         view?.showToastMessage?(title: title, body: errorMessage)
     }
-    
+}
+
+extension ContactsPresenter: ContactCellDelegate {
 
 }

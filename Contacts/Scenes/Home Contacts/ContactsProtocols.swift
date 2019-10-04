@@ -16,6 +16,10 @@ protocol ContactsPresenterProtocol: BasePresenterProtocol {
 
     /* ViewController -> Presenter */
     func getContacts()
+    var contactTableData: [ContactTableSection] { get }
+    func configure(cell: ContactCellView, sectionIndex: Int, rowIndex: Int)
+
+
 }
 
 protocol ContactsInteractorInputProtocol: class {
@@ -42,10 +46,17 @@ protocol ContactsViewProtocol: BaseViewProtocal {
     var presenter: ContactsPresenterProtocol? { get set }
 
     /* Presenter -> ViewController */
+    func reloadData()
 }
 
 // MARK: - Router
 
 protocol ContactsWireframeProtocol: class {
 
+}
+
+
+protocol ContactCellView {
+    func setDelegate( delegate: ContactCellDelegate )
+    func configureContactCell(viewModel: ContactViewModel, sectionIndex: Int, rowIndex: Int)
 }
