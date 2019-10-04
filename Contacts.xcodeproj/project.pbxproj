@@ -7,42 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036F5C12AEEFFF9F27BF6007 /* Pods_Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD0EA83A5D0A945A78F56A3 /* Pods_Contacts.framework */; };
 		11BFD2E72347488A008123C5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD2E62347488A008123C5 /* Environment.swift */; };
+		11BFD2F523474EA8008123C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BFD2F423474EA8008123C5 /* Assets.xcassets */; };
+		11BFD2F9234750FE008123C5 /* Localized+Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD2F8234750FE008123C5 /* Localized+Runtime.swift */; };
+		11BFD2FB23475149008123C5 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD2FA23475149008123C5 /* Localized.swift */; };
+		11BFD2FE234752AC008123C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BFD300234752AC008123C5 /* Localizable.strings */; };
 		8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B6C721FFFD7D00EA728D /* AppDelegate.swift */; };
 		8412B6CD21FFFD7D00EA728D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6CB21FFFD7D00EA728D /* Main.storyboard */; };
 		8412B6D221FFFD8100EA728D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6D021FFFD8100EA728D /* LaunchScreen.storyboard */; };
 		844B9283223766DB00BF79DE /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B9282223766DB00BF79DE /* ContactsListViewController.swift */; };
 		846137C5220555E9009194EA /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846137C4220555E9009194EA /* ContactDetailsViewController.swift */; };
-		8463329E223F7C89003E6336 /* favourite_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633286223F7C87003E6336 /* favourite_button@2x.png */; };
-		8463329F223F7C89003E6336 /* call_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633287223F7C87003E6336 /* call_button@2x.png */; };
-		846332A0223F7C89003E6336 /* email_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633288223F7C88003E6336 /* email_button.png */; };
-		846332A1223F7C89003E6336 /* camera_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633289223F7C88003E6336 /* camera_button@3x.png */; };
-		846332A2223F7C89003E6336 /* camera_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328A223F7C88003E6336 /* camera_button.png */; };
-		846332A3223F7C89003E6336 /* email_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328B223F7C88003E6336 /* email_button@2x.png */; };
-		846332A4223F7C89003E6336 /* favourite_button_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328C223F7C88003E6336 /* favourite_button_selected@2x.png */; };
-		846332A5223F7C89003E6336 /* camera_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328D223F7C88003E6336 /* camera_button@2x.png */; };
-		846332A6223F7C89003E6336 /* favourite_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328E223F7C88003E6336 /* favourite_button.png */; };
-		846332A7223F7C89003E6336 /* call_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463328F223F7C88003E6336 /* call_button@3x.png */; };
-		846332A8223F7C89003E6336 /* favourite_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633290223F7C88003E6336 /* favourite_button@3x.png */; };
-		846332A9223F7C89003E6336 /* home_favourite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633291223F7C88003E6336 /* home_favourite@3x.png */; };
-		846332AA223F7C89003E6336 /* message_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633292223F7C88003E6336 /* message_button@2x.png */; };
-		846332AB223F7C89003E6336 /* placeholder_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633293223F7C89003E6336 /* placeholder_photo@2x.png */; };
-		846332AC223F7C89003E6336 /* placeholder_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633294223F7C89003E6336 /* placeholder_photo.png */; };
-		846332AD223F7C89003E6336 /* message_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633295223F7C89003E6336 /* message_button.png */; };
-		846332AE223F7C89003E6336 /* call_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633296223F7C89003E6336 /* call_button.png */; };
-		846332AF223F7C89003E6336 /* email_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633297223F7C89003E6336 /* email_button@3x.png */; };
-		846332B0223F7C89003E6336 /* favourite_button_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633298223F7C89003E6336 /* favourite_button_selected@3x.png */; };
-		846332B1223F7C89003E6336 /* favourite_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84633299223F7C89003E6336 /* favourite_button_selected.png */; };
-		846332B2223F7C89003E6336 /* message_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463329A223F7C89003E6336 /* message_button@3x.png */; };
-		846332B3223F7C89003E6336 /* home_favourite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463329B223F7C89003E6336 /* home_favourite@2x.png */; };
-		846332B4223F7C89003E6336 /* home_favourite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463329C223F7C89003E6336 /* home_favourite.png */; };
-		846332B5223F7C89003E6336 /* placeholder_photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8463329D223F7C89003E6336 /* placeholder_photo@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C42CE384B763ED8C3D5DD58 /* Pods-Contacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.release.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.release.xcconfig"; sourceTree = "<group>"; };
 		11BFD2E62347488A008123C5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		11BFD2E8234748BD008123C5 /* stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = stage.xcconfig; sourceTree = "<group>"; };
 		11BFD2EB234748FE008123C5 /* live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = live.xcconfig; sourceTree = "<group>"; };
+		11BFD2F423474EA8008123C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11BFD2F8234750FE008123C5 /* Localized+Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Runtime.swift"; sourceTree = "<group>"; };
+		11BFD2FA23475149008123C5 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		11BFD2FF234752AC008123C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52E9ABDEA9F0A78E8EFD6245 /* Pods-Contacts.live debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.live debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.live debug.xcconfig"; sourceTree = "<group>"; };
+		710FAB9EDD9617659D6EE143 /* Pods-Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8412B6C421FFFD7D00EA728D /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8412B6C721FFFD7D00EA728D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8412B6CC21FFFD7D00EA728D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,30 +38,10 @@
 		8412B6D321FFFD8100EA728D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844B9282223766DB00BF79DE /* ContactsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
 		846137C4220555E9009194EA /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
-		84633286223F7C87003E6336 /* favourite_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourite_button@2x.png"; sourceTree = "<group>"; };
-		84633287223F7C87003E6336 /* call_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_button@2x.png"; sourceTree = "<group>"; };
-		84633288223F7C88003E6336 /* email_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_button.png; sourceTree = "<group>"; };
-		84633289223F7C88003E6336 /* camera_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button@3x.png"; sourceTree = "<group>"; };
-		8463328A223F7C88003E6336 /* camera_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_button.png; sourceTree = "<group>"; };
-		8463328B223F7C88003E6336 /* email_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email_button@2x.png"; sourceTree = "<group>"; };
-		8463328C223F7C88003E6336 /* favourite_button_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourite_button_selected@2x.png"; sourceTree = "<group>"; };
-		8463328D223F7C88003E6336 /* camera_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button@2x.png"; sourceTree = "<group>"; };
-		8463328E223F7C88003E6336 /* favourite_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourite_button.png; sourceTree = "<group>"; };
-		8463328F223F7C88003E6336 /* call_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_button@3x.png"; sourceTree = "<group>"; };
-		84633290223F7C88003E6336 /* favourite_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourite_button@3x.png"; sourceTree = "<group>"; };
-		84633291223F7C88003E6336 /* home_favourite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_favourite@3x.png"; sourceTree = "<group>"; };
-		84633292223F7C88003E6336 /* message_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_button@2x.png"; sourceTree = "<group>"; };
-		84633293223F7C89003E6336 /* placeholder_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder_photo@2x.png"; sourceTree = "<group>"; };
-		84633294223F7C89003E6336 /* placeholder_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_photo.png; sourceTree = "<group>"; };
-		84633295223F7C89003E6336 /* message_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_button.png; sourceTree = "<group>"; };
-		84633296223F7C89003E6336 /* call_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call_button.png; sourceTree = "<group>"; };
-		84633297223F7C89003E6336 /* email_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email_button@3x.png"; sourceTree = "<group>"; };
-		84633298223F7C89003E6336 /* favourite_button_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourite_button_selected@3x.png"; sourceTree = "<group>"; };
-		84633299223F7C89003E6336 /* favourite_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourite_button_selected.png; sourceTree = "<group>"; };
-		8463329A223F7C89003E6336 /* message_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_button@3x.png"; sourceTree = "<group>"; };
-		8463329B223F7C89003E6336 /* home_favourite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_favourite@2x.png"; sourceTree = "<group>"; };
-		8463329C223F7C89003E6336 /* home_favourite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_favourite.png; sourceTree = "<group>"; };
-		8463329D223F7C89003E6336 /* placeholder_photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder_photo@3x.png"; sourceTree = "<group>"; };
+		8AFAB4DAE9668BC96696A1E9 /* Pods-Contacts.stage debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.stage debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.stage debug.xcconfig"; sourceTree = "<group>"; };
+		9AD0EA83A5D0A945A78F56A3 /* Pods_Contacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6901CC47D538B51074FF450 /* Pods-Contacts.live release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.live release.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.live release.xcconfig"; sourceTree = "<group>"; };
+		E5EE16F52E1E6964E6543DB0 /* Pods-Contacts.stage release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.stage release.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.stage release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036F5C12AEEFFF9F27BF6007 /* Pods_Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +123,8 @@
 		11BFD2E3234747B7008123C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11BFD2F7234750C9008123C5 /* Localization */,
+				11BFD2F6234750AF008123C5 /* Assets */,
 				11BFD2E52347485D008123C5 /* Configuration */,
 				8412B6D321FFFD8100EA728D /* Info.plist */,
 			);
@@ -179,11 +150,31 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		11BFD2F6234750AF008123C5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				11BFD2F423474EA8008123C5 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		11BFD2F7234750C9008123C5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				11BFD2F8234750FE008123C5 /* Localized+Runtime.swift */,
+				11BFD2FA23475149008123C5 /* Localized.swift */,
+				11BFD300234752AC008123C5 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		8412B6BB21FFFD7D00EA728D = {
 			isa = PBXGroup;
 			children = (
 				8412B6C621FFFD7D00EA728D /* Contacts */,
 				8412B6C521FFFD7D00EA728D /* Products */,
+				BD2168C92D2DC9BE9A843710 /* Pods */,
+				F877E4931333F0421FCCC4C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,32 +210,29 @@
 		84633257223F7B8D003E6336 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				84633296223F7C89003E6336 /* call_button.png */,
-				84633287223F7C87003E6336 /* call_button@2x.png */,
-				8463328F223F7C88003E6336 /* call_button@3x.png */,
-				8463328A223F7C88003E6336 /* camera_button.png */,
-				8463328D223F7C88003E6336 /* camera_button@2x.png */,
-				84633289223F7C88003E6336 /* camera_button@3x.png */,
-				84633288223F7C88003E6336 /* email_button.png */,
-				8463328B223F7C88003E6336 /* email_button@2x.png */,
-				84633297223F7C89003E6336 /* email_button@3x.png */,
-				84633299223F7C89003E6336 /* favourite_button_selected.png */,
-				8463328C223F7C88003E6336 /* favourite_button_selected@2x.png */,
-				84633298223F7C89003E6336 /* favourite_button_selected@3x.png */,
-				8463328E223F7C88003E6336 /* favourite_button.png */,
-				84633286223F7C87003E6336 /* favourite_button@2x.png */,
-				84633290223F7C88003E6336 /* favourite_button@3x.png */,
-				8463329C223F7C89003E6336 /* home_favourite.png */,
-				8463329B223F7C89003E6336 /* home_favourite@2x.png */,
-				84633291223F7C88003E6336 /* home_favourite@3x.png */,
-				84633295223F7C89003E6336 /* message_button.png */,
-				84633292223F7C88003E6336 /* message_button@2x.png */,
-				8463329A223F7C89003E6336 /* message_button@3x.png */,
-				84633294223F7C89003E6336 /* placeholder_photo.png */,
-				84633293223F7C89003E6336 /* placeholder_photo@2x.png */,
-				8463329D223F7C89003E6336 /* placeholder_photo@3x.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		BD2168C92D2DC9BE9A843710 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				710FAB9EDD9617659D6EE143 /* Pods-Contacts.debug.xcconfig */,
+				8AFAB4DAE9668BC96696A1E9 /* Pods-Contacts.stage debug.xcconfig */,
+				52E9ABDEA9F0A78E8EFD6245 /* Pods-Contacts.live debug.xcconfig */,
+				0C42CE384B763ED8C3D5DD58 /* Pods-Contacts.release.xcconfig */,
+				E5EE16F52E1E6964E6543DB0 /* Pods-Contacts.stage release.xcconfig */,
+				A6901CC47D538B51074FF450 /* Pods-Contacts.live release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F877E4931333F0421FCCC4C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AD0EA83A5D0A945A78F56A3 /* Pods_Contacts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8412B6EC21FFFD8100EA728D /* Build configuration list for PBXNativeTarget "Contacts" */;
 			buildPhases = (
+				00C32ABC8B6FB73D0DB074B5 /* [CP] Check Pods Manifest.lock */,
 				8412B6C021FFFD7D00EA728D /* Sources */,
 				8412B6C121FFFD7D00EA728D /* Frameworks */,
 				8412B6C221FFFD7D00EA728D /* Resources */,
+				11BFD30123475AA8008123C5 /* SwiftGen RunScript */,
 			);
 			buildRules = (
 			);
@@ -306,42 +296,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846332A4223F7C89003E6336 /* favourite_button_selected@2x.png in Resources */,
-				846332AB223F7C89003E6336 /* placeholder_photo@2x.png in Resources */,
-				846332B1223F7C89003E6336 /* favourite_button_selected.png in Resources */,
-				846332A1223F7C89003E6336 /* camera_button@3x.png in Resources */,
-				846332B0223F7C89003E6336 /* favourite_button_selected@3x.png in Resources */,
-				846332A2223F7C89003E6336 /* camera_button.png in Resources */,
-				846332A6223F7C89003E6336 /* favourite_button.png in Resources */,
 				8412B6D221FFFD8100EA728D /* LaunchScreen.storyboard in Resources */,
-				846332A3223F7C89003E6336 /* email_button@2x.png in Resources */,
-				846332B4223F7C89003E6336 /* home_favourite.png in Resources */,
-				846332A5223F7C89003E6336 /* camera_button@2x.png in Resources */,
-				846332A8223F7C89003E6336 /* favourite_button@3x.png in Resources */,
-				846332AE223F7C89003E6336 /* call_button.png in Resources */,
-				846332B2223F7C89003E6336 /* message_button@3x.png in Resources */,
-				846332A7223F7C89003E6336 /* call_button@3x.png in Resources */,
+				11BFD2FE234752AC008123C5 /* Localizable.strings in Resources */,
 				8412B6CD21FFFD7D00EA728D /* Main.storyboard in Resources */,
-				846332B3223F7C89003E6336 /* home_favourite@2x.png in Resources */,
-				846332AF223F7C89003E6336 /* email_button@3x.png in Resources */,
-				846332AA223F7C89003E6336 /* message_button@2x.png in Resources */,
-				8463329F223F7C89003E6336 /* call_button@2x.png in Resources */,
-				846332AD223F7C89003E6336 /* message_button.png in Resources */,
-				846332A0223F7C89003E6336 /* email_button.png in Resources */,
-				846332B5223F7C89003E6336 /* placeholder_photo@3x.png in Resources */,
-				846332A9223F7C89003E6336 /* home_favourite@3x.png in Resources */,
-				8463329E223F7C89003E6336 /* favourite_button@2x.png in Resources */,
-				846332AC223F7C89003E6336 /* placeholder_photo.png in Resources */,
+				11BFD2F523474EA8008123C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00C32ABC8B6FB73D0DB074B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Contacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11BFD30123475AA8008123C5 /* SwiftGen RunScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen RunScript";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8412B6C021FFFD7D00EA728D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BFD2F9234750FE008123C5 /* Localized+Runtime.swift in Sources */,
+				11BFD2FB23475149008123C5 /* Localized.swift in Sources */,
 				844B9283223766DB00BF79DE /* ContactsListViewController.swift in Sources */,
 				11BFD2E72347488A008123C5 /* Environment.swift in Sources */,
 				8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */,
@@ -352,6 +365,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		11BFD300234752AC008123C5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11BFD2FF234752AC008123C5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8412B6CB21FFFD7D00EA728D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,6 +456,7 @@
 		};
 		11BFD2ED23474A12008123C5 /* Live Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E9ABDEA9F0A78E8EFD6245 /* Pods-Contacts.live debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +538,7 @@
 		};
 		11BFD2EF23474A15008123C5 /* Stage Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AFAB4DAE9668BC96696A1E9 /* Pods-Contacts.stage debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +614,7 @@
 		};
 		11BFD2F123474A1C008123C5 /* Stage Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EE16F52E1E6964E6543DB0 /* Pods-Contacts.stage release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -666,6 +690,7 @@
 		};
 		11BFD2F323474A24008123C5 /* Live Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6901CC47D538B51074FF450 /* Pods-Contacts.live release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -803,6 +828,7 @@
 		};
 		8412B6ED21FFFD8100EA728D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710FAB9EDD9617659D6EE143 /* Pods-Contacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -822,6 +848,7 @@
 		};
 		8412B6EE21FFFD8100EA728D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C42CE384B763ED8C3D5DD58 /* Pods-Contacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
