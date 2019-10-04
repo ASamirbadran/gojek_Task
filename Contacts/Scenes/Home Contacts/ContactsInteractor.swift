@@ -28,7 +28,7 @@ extension ContactsInteractor: ContactsInteractorInputProtocol {
             case .failure(let error):
                 self.presenter?.errorFetchingContacts(
                     title: L10n.error,
-                    errorMessage: "\(error.message ?? "") \(error.code ?? 0)")
+                    errorMessage: "\(error.message ?? "smth went wrong") \(error.code ?? 0)")
                 
             }
         })

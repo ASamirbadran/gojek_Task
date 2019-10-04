@@ -26,7 +26,7 @@ class ContactCell: UITableViewCell, ContactCellView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-        roundedImage(image: contactPhotoView)
+        contactPhotoView.roundedImage()
 
       }
     
@@ -51,10 +51,6 @@ class ContactCell: UITableViewCell, ContactCellView {
 
 
 extension ContactCell {
-    func roundedImage(image: UIImageView) {
-        image.layer.cornerRadius = image.frame.size.height/2
-        image.clipsToBounds = true
-    }
     func loadContactImage(imageUrl: String) {
         let imageUrl = URL(string: imageUrl)
 

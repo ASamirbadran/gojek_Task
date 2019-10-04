@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="132.68365817091455"/>
         </scene>
-        <!--Contact Details View Controller-->
+        <!--Contacts List View Controller-->
         <scene sceneID="7NA-6J-Gew">
             <objects>
-                <viewController id="g7w-bV-OS4" customClass="ContactDetailsViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g7w-bV-OS4" customClass="ContactsListViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AK4-nZ-YFt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,7 +378,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAZ-bh-WAt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q4Z-Iy-h4L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

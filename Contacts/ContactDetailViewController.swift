@@ -1,5 +1,5 @@
 //
-//  ContactDetailsViewController.swift
+//  ContactDetailViewController.swift.swift
 //  Contacts
 //
 //  Created by admin on 02/02/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
+class ContactDetailViewController: UIViewController {
 
     var contactURL: String?
     var editContact: Contacts?
@@ -118,4 +118,28 @@ class ContactDetailsViewController: UIViewController {
 
     }
 
+}
+
+
+struct Contacts: Decodable {
+    let id: Int?
+    let firstName: String?
+    let lastName: String?
+    let profilePic: String?
+    let favorite: Bool?
+    let url: String?
+    let phoneNumber: String?
+    let email: String?
+
+    var fullName: String {
+        if firstName == nil && lastName == nil {
+            return ""
+        } else if firstName == nil {
+            return lastName ?? ""
+        } else if lastName == nil {
+            return firstName ?? ""
+        } else {
+            return (firstName ?? "")  + " " + (lastName ?? "")
+        }
+    }
 }

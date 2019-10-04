@@ -29,6 +29,11 @@ class ContactsPresenter: NSObject {
 
 }
 extension ContactsPresenter: ContactsPresenterProtocol {
+    func getUserDetails(section: Int, row: Int) {
+        let userDataUrl = contactTableSections[section].contacts[row].url
+        router?.openContactDetailsScreen(contactUrl: userDataUrl)
+    }
+    
     func configure(cell: ContactCellView, sectionIndex: Int, rowIndex: Int) {
         let contactEntryViewModel = contactTableSections[sectionIndex].contacts[rowIndex]
         cell.configureContactCell(viewModel: contactEntryViewModel, sectionIndex: sectionIndex, rowIndex: rowIndex)

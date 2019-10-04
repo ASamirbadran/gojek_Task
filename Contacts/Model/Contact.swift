@@ -15,6 +15,9 @@ struct Contact : Codable {
     let profilePic : String?
     let favorite : Bool?
     let url : String?
+    
+    let phoneNumber: String?
+    let email: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -24,6 +27,9 @@ struct Contact : Codable {
         case profilePic = "profile_pic"
         case favorite = "favorite"
         case url = "url"
+        
+        case phoneNumber = "phone_number"
+        case email = "email"
     }
 
     init(from decoder: Decoder) throws {
@@ -34,6 +40,8 @@ struct Contact : Codable {
         profilePic = try values.decodeIfPresent(String.self, forKey: .profilePic)
         favorite = try values.decodeIfPresent(Bool.self, forKey: .favorite)
         url = try values.decodeIfPresent(String.self, forKey: .url)
+        phoneNumber = try values.decodeIfPresent(String.self, forKey: .phoneNumber)
+        email = try values.decodeIfPresent(String.self, forKey: .email)
     }
 
 }

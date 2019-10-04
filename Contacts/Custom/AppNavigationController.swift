@@ -20,6 +20,8 @@ class AppNavigationController: UINavigationController {
         self.navigationItem.leftItemsSupplementBackButton = true;
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:
             UIColor.darkGray]
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {

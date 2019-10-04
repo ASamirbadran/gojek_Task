@@ -67,8 +67,6 @@ extension ContactsViewController: ContactsViewProtocol {
     func reloadData() {
         contactsTableView.reloadData()
     }
-    
-
 }
 
 extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -93,10 +91,8 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let data = contactListSections[indexPath.section].contacts[indexPath.row]
-//
-//        selectedContactURL = data.url as! String
-//        performSegue(withIdentifier: "viewContact", sender: nil)
+        presenter?.getUserDetails(section: indexPath.section, row: indexPath.row)
+        
     }
     
     

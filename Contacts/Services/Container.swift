@@ -31,6 +31,16 @@ class Container {
                homeVC.editExtendedView()
                return homeVC
     }
+    
+    class func getContactDetailsScreen(contactUrl: String) -> ContactDetailsViewController {
+        guard let contactDetailsVC = ContactDetailsRouter.createModule() as? ContactDetailsViewController else {
+            return ContactDetailsViewController()
+        }
+        contactDetailsVC.userDetailsUrl = contactUrl
+        contactDetailsVC.editExtendedView()
+        return contactDetailsVC
+    }
+    
 }
 
 

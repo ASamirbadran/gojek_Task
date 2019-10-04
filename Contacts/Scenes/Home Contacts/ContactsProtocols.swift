@@ -18,7 +18,7 @@ protocol ContactsPresenterProtocol: BasePresenterProtocol {
     func getContacts()
     var contactTableData: [ContactTableSection] { get }
     func configure(cell: ContactCellView, sectionIndex: Int, rowIndex: Int)
-
+    func getUserDetails(section: Int, row: Int)
 
 }
 
@@ -52,7 +52,7 @@ protocol ContactsViewProtocol: BaseViewProtocal {
 // MARK: - Router
 
 protocol ContactsWireframeProtocol: class {
-
+    func openContactDetailsScreen(contactUrl: String)
 }
 
 

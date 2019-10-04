@@ -33,24 +33,9 @@ class BaseViewController: UIViewController {
         }
         return controller
     }
-    func setupNavigationBar(title: String, prefersLargeTitles: Bool = true) {
+    func setupNavigationBar(title: String) {
         self.navigationItem.title = title
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
-        } else {
-            // Fallback on earlier versions
-        }
-
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
-        } else {
-            // Fallback on earlier versions
-        }
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
-        }
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
     }
     
     func showMessage(title: String, body: String) {
@@ -70,7 +55,7 @@ class BaseViewController: UIViewController {
 extension BaseViewController:  ViewIndicatorProtocal, Toastermessages {
     
     func showToastMessage(title: String, body: String) {
-        showMessage(title: title, body: title)
+        showMessage(title: title, body: body)
     }
     
     func showLoadingIndicator() {

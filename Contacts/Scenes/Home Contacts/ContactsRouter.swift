@@ -32,5 +32,9 @@ class ContactsRouter {
 }
 
 extension ContactsRouter: ContactsWireframeProtocol {
+    func openContactDetailsScreen(contactUrl: String) {
+        let detailsScreen = Container.getContactDetailsScreen(contactUrl: contactUrl)
 
+        viewController?.navigationController?.pushViewController(detailsScreen, animated: true)
+    }
 }
