@@ -13,6 +13,8 @@
 		11BFD2F9234750FE008123C5 /* Localized+Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD2F8234750FE008123C5 /* Localized+Runtime.swift */; };
 		11BFD2FB23475149008123C5 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD2FA23475149008123C5 /* Localized.swift */; };
 		11BFD2FE234752AC008123C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BFD300234752AC008123C5 /* Localizable.strings */; };
+		11BFD30423475CE8008123C5 /* KeyValuePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD30323475CE8008123C5 /* KeyValuePersistence.swift */; };
+		11BFD30623475CFC008123C5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD30523475CFB008123C5 /* PersistanceManager.swift */; };
 		8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B6C721FFFD7D00EA728D /* AppDelegate.swift */; };
 		8412B6CD21FFFD7D00EA728D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6CB21FFFD7D00EA728D /* Main.storyboard */; };
 		8412B6D221FFFD8100EA728D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6D021FFFD8100EA728D /* LaunchScreen.storyboard */; };
@@ -29,6 +31,8 @@
 		11BFD2F8234750FE008123C5 /* Localized+Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Runtime.swift"; sourceTree = "<group>"; };
 		11BFD2FA23475149008123C5 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		11BFD2FF234752AC008123C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		11BFD30323475CE8008123C5 /* KeyValuePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValuePersistence.swift; sourceTree = "<group>"; };
+		11BFD30523475CFB008123C5 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		52E9ABDEA9F0A78E8EFD6245 /* Pods-Contacts.live debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.live debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.live debug.xcconfig"; sourceTree = "<group>"; };
 		710FAB9EDD9617659D6EE143 /* Pods-Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8412B6C421FFFD7D00EA728D /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,7 @@
 		11BFD2DF23474686008123C5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				11BFD30223475CC5008123C5 /* Persistence Manager */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +171,15 @@
 				11BFD300234752AC008123C5 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		11BFD30223475CC5008123C5 /* Persistence Manager */ = {
+			isa = PBXGroup;
+			children = (
+				11BFD30323475CE8008123C5 /* KeyValuePersistence.swift */,
+				11BFD30523475CFB008123C5 /* PersistanceManager.swift */,
+			);
+			path = "Persistence Manager";
 			sourceTree = "<group>";
 		};
 		8412B6BB21FFFD7D00EA728D = {
@@ -359,6 +373,8 @@
 				11BFD2E72347488A008123C5 /* Environment.swift in Sources */,
 				8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */,
 				846137C5220555E9009194EA /* ContactDetailsViewController.swift in Sources */,
+				11BFD30423475CE8008123C5 /* KeyValuePersistence.swift in Sources */,
+				11BFD30623475CFC008123C5 /* PersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
