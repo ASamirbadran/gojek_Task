@@ -1,16 +1,30 @@
 PODS:
+  - Alamofire (4.8.2)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
   - SwiftGen (6.1.0)
 
 DEPENDENCIES:
+  - Moya
   - SwiftGen
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - Result
     - SwiftGen
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: 6fac65ad17e4e67548754fffbebe53d6d7b79f93
+PODFILE CHECKSUM: 41edebc72758ac2a91a6fb4717a3993ada88420c
 
 COCOAPODS: 1.7.1
