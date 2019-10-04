@@ -279,6 +279,7 @@
 				TargetAttributes = {
 					8412B6C321FFFD7D00EA728D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -446,7 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Live Debug";
@@ -527,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Stage Debug";
@@ -602,7 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Stage Release";
@@ -677,7 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Live Release";
@@ -814,7 +815,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -833,7 +834,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "go-jek.Contacts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
