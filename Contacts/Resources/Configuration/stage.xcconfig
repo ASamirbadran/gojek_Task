@@ -1,0 +1,13 @@
+//
+//  stage.xcconfig
+//  Contacts
+//
+//  Created by Ahmed Samir on 10/4/19.
+//  Copyright © 2019 GoJek. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = gojek-contacts-app.herokuapp.com
+API_KEY = 

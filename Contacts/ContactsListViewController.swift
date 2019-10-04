@@ -30,7 +30,8 @@ class ContactsListViewController: UIViewController, UITableViewDataSource, UITab
         super.viewWillAppear(animated)
 
 
-        let url = URL.init(string: "https://gojek-contacts-app.herokuapp.com/contacts.json")!
+        let baseUrl = Environment.rootURL
+        let url = URL.init(string: baseUrl + "/contacts.json")!
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
