@@ -15,6 +15,7 @@ protocol ContactsPresenterProtocol: BasePresenterProtocol {
     var interactor: ContactsInteractorInputProtocol? { get set }
 
     /* ViewController -> Presenter */
+    func getContacts()
 }
 
 protocol ContactsInteractorInputProtocol: class {
@@ -22,6 +23,7 @@ protocol ContactsInteractorInputProtocol: class {
     var presenter: ContactsInteractorOutputProtocol? { get set }
 
     /* Presenter -> Interactor */
+    func fetchContacts()
 }
 
 // MARK: - Interactor -> Presenter
@@ -29,6 +31,8 @@ protocol ContactsInteractorInputProtocol: class {
 protocol ContactsInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+    func contactFetchedSuccessfully(contactList: [Contact])
+    func errorFetchingContacts(title: String, errorMessage: String)
 }
 
 // MARK: - Presenter -> ViewController

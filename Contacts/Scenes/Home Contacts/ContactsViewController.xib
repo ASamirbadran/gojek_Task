@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsViewController" customModule="Contacts" customModuleProvider="target">
             <connections>
+                <outlet property="contactsTableView" destination="rC1-Zm-Xyp" id="Ll8-EQ-8QW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,19 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHd-GK-zEr" userLabel="Safe Area Container">
                     <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                    <color key="backgroundColor" red="0.93055107770000001" green="0.93055107770000001" blue="0.93055107770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-Zm-Xyp">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rC1-Zm-Xyp" firstAttribute="top" secondItem="OHd-GK-zEr" secondAttribute="top" id="1TH-CS-MnO"/>
+                        <constraint firstItem="rC1-Zm-Xyp" firstAttribute="leading" secondItem="OHd-GK-zEr" secondAttribute="leading" id="73R-zN-go6"/>
+                        <constraint firstAttribute="bottom" secondItem="rC1-Zm-Xyp" secondAttribute="bottom" id="P5G-zD-Vai"/>
+                        <constraint firstAttribute="trailing" secondItem="rC1-Zm-Xyp" secondAttribute="trailing" id="cSy-cf-A6K"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

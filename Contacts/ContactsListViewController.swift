@@ -10,7 +10,7 @@ import UIKit
 
 struct ContactListSection {
     let sectionTitle: String
-    let contacts: [Contact]
+    let contacts: [Contacts]
 }
 
 class ContactsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -44,7 +44,7 @@ class ContactsListViewController: UIViewController, UITableViewDataSource, UITab
 
             do {
 
-                let contacts =  try decoder.decode([Contact].self, from: responseData)
+                let contacts =  try decoder.decode([Contacts].self, from: responseData)
 
 
                 let sortedContacts = contacts.sorted(by: { $0.fullName < $1.fullName })
@@ -157,7 +157,7 @@ class ContactCell: UITableViewCell {
     }
 }
 
-struct Contact: Decodable {
+struct Contacts: Decodable {
     let id: Int?
     let firstName: String?
     let lastName: String?

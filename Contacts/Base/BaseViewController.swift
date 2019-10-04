@@ -80,7 +80,6 @@ extension BaseViewController:  ViewIndicatorProtocal, Toastermessages {
     
     func hideLoadingIndicator() {
         Loader.hide()
-
     }
     
 }

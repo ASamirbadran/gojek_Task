@@ -24,8 +24,21 @@ class ContactsPresenter: NSObject {
 
 }
 extension ContactsPresenter: ContactsPresenterProtocol {
-
+    func getContacts() {
+        view?.showLoadingIndicator?()
+        interactor?.fetchContacts()
+    }
 }
 extension ContactsPresenter: ContactsInteractorOutputProtocol {
+    func contactFetchedSuccessfully(contactList: [Contact]) {
+        view?.hideLoadingIndicator?()
+        print(contactList)
+    }
+    
+    func errorFetchingContacts(title: String, errorMessage: String) {
+        view?.hideLoadingIndicator?()
+        view?.showToastMessage?(title: title, body: errorMessage)
+    }
+    
 
 }

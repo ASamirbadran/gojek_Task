@@ -19,6 +19,7 @@ class ContactsViewController: BaseViewController {
 
     // MARK: - IBOutlets
 
+    @IBOutlet weak private var contactsTableView: UITableView!
     // MARK: - Custom Setter
     public func setPresenter (presenter: ContactsPresenterProtocol) {
         self.presenter = presenter
@@ -30,6 +31,9 @@ extension ContactsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad?()
+        //getting contactList
+        presenter?.getContacts()
+        setupNavigationBar(title: "Contacts")
     }
 }
 

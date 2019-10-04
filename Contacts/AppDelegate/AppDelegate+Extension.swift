@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension AppDelegate {
     
@@ -14,5 +15,13 @@ extension AppDelegate {
         //getting from enviroment xconfig
         let defaults = NetworkDefaults(baseUrl: Environment.rootURL, apiKey: Environment.apiKey)
         NetworkManager.shared = NetworkManager(config: defaults)
+    }
+    
+    func openHomeScreen() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        let homeVc = Container.embedVCInNavController(Container.getHomeScreen())
+        self.window?.rootViewController = homeVc
+        self.window?.makeKeyAndVisible()
     }
 }

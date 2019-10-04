@@ -11,7 +11,7 @@ import UIKit
 class ContactDetailsViewController: UIViewController {
 
     var contactURL: String?
-    var editContact: Contact?
+    var editContact: Contacts?
 
     @IBOutlet weak var contactPhotoView: UIImageView!
     @IBOutlet weak var contactName: UILabel!
@@ -69,7 +69,7 @@ class ContactDetailsViewController: UIViewController {
             let decoder = JSONDecoder.init()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-            self?.editContact =  try! decoder.decode(Contact.self, from: urlData)
+            self?.editContact =  try! decoder.decode(Contacts.self, from: urlData)
 
             DispatchQueue.main.async {
                 self?.reloadData()

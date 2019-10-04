@@ -23,6 +23,21 @@ class Container {
           let nav = AppNavigationController(rootViewController: viewController)
           return nav
       }
-    
-    
+
+    class func getHomeScreen() -> ContactsViewController {
+         guard let homeVC = ContactsRouter.createModule() as? ContactsViewController else {
+                   return ContactsViewController()
+               }
+               homeVC.editExtendedView()
+               return homeVC
+    }
+}
+
+
+private extension UIViewController {
+    func editExtendedView( ) {
+        self.edgesForExtendedLayout = [.top]
+        self.extendedLayoutIncludesOpaqueBars = true
+
+    }
 }
