@@ -8,6 +8,8 @@ target 'Contacts' do
   # Pods for Contacts
 	pod 'SwiftGen'
   pod 'Moya'
+  pod 'SwiftMessages'
+
 
 
 end

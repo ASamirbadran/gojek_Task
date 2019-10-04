@@ -22,6 +22,16 @@
 		11BFD3112347626D008123C5 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD3102347626D008123C5 /* AppDelegate+Extension.swift */; };
 		11BFD313234765A3008123C5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD312234765A3008123C5 /* Container.swift */; };
 		11BFD3152347669E008123C5 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD3142347669E008123C5 /* AppNavigationController.swift */; };
+		11BFD317234767E2008123C5 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD316234767E2008123C5 /* BaseProtocol.swift */; };
+		11BFD319234767F2008123C5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD318234767F2008123C5 /* BaseView.swift */; };
+		11BFD31B23476805008123C5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD31A23476805008123C5 /* BaseViewController.swift */; };
+		11BFD31D234769C6008123C5 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD31C234769C6008123C5 /* Loader.swift */; };
+		11BFD32523476C0F008123C5 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD31F23476C0F008123C5 /* ContactsPresenter.swift */; };
+		11BFD32623476C0F008123C5 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD32023476C0F008123C5 /* ContactsRouter.swift */; };
+		11BFD32723476C0F008123C5 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD32123476C0F008123C5 /* ContactsViewController.swift */; };
+		11BFD32823476C0F008123C5 /* ContactsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD32223476C0F008123C5 /* ContactsProtocols.swift */; };
+		11BFD32923476C0F008123C5 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFD32323476C0F008123C5 /* ContactsInteractor.swift */; };
+		11BFD32A23476C0F008123C5 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BFD32423476C0F008123C5 /* ContactsViewController.xib */; };
 		8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B6C721FFFD7D00EA728D /* AppDelegate.swift */; };
 		8412B6CD21FFFD7D00EA728D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6CB21FFFD7D00EA728D /* Main.storyboard */; };
 		8412B6D221FFFD8100EA728D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412B6D021FFFD8100EA728D /* LaunchScreen.storyboard */; };
@@ -47,6 +57,16 @@
 		11BFD3102347626D008123C5 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		11BFD312234765A3008123C5 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		11BFD3142347669E008123C5 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		11BFD316234767E2008123C5 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		11BFD318234767F2008123C5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		11BFD31A23476805008123C5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		11BFD31C234769C6008123C5 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		11BFD31F23476C0F008123C5 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
+		11BFD32023476C0F008123C5 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
+		11BFD32123476C0F008123C5 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		11BFD32223476C0F008123C5 /* ContactsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProtocols.swift; sourceTree = "<group>"; };
+		11BFD32323476C0F008123C5 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
+		11BFD32423476C0F008123C5 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		52E9ABDEA9F0A78E8EFD6245 /* Pods-Contacts.live debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.live debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.live debug.xcconfig"; sourceTree = "<group>"; };
 		710FAB9EDD9617659D6EE143 /* Pods-Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8412B6C421FFFD7D00EA728D /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +97,7 @@
 		11BFD2DA23474667008123C5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				11BFD31E23476BD6008123C5 /* Home Contacts */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -85,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				11BFD3142347669E008123C5 /* AppNavigationController.swift */,
+				11BFD31C234769C6008123C5 /* Loader.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -99,6 +121,9 @@
 		11BFD2DD23474680008123C5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				11BFD316234767E2008123C5 /* BaseProtocol.swift */,
+				11BFD318234767F2008123C5 /* BaseView.swift */,
+				11BFD31A23476805008123C5 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -201,6 +226,19 @@
 				11BFD30523475CFB008123C5 /* PersistanceManager.swift */,
 			);
 			path = "Persistence Manager";
+			sourceTree = "<group>";
+		};
+		11BFD31E23476BD6008123C5 /* Home Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				11BFD31F23476C0F008123C5 /* ContactsPresenter.swift */,
+				11BFD32023476C0F008123C5 /* ContactsRouter.swift */,
+				11BFD32123476C0F008123C5 /* ContactsViewController.swift */,
+				11BFD32223476C0F008123C5 /* ContactsProtocols.swift */,
+				11BFD32323476C0F008123C5 /* ContactsInteractor.swift */,
+				11BFD32423476C0F008123C5 /* ContactsViewController.xib */,
+			);
+			path = "Home Contacts";
 			sourceTree = "<group>";
 		};
 		8412B6BB21FFFD7D00EA728D = {
@@ -336,6 +374,7 @@
 				11BFD2FE234752AC008123C5 /* Localizable.strings in Resources */,
 				8412B6CD21FFFD7D00EA728D /* Main.storyboard in Resources */,
 				11BFD2F523474EA8008123C5 /* Assets.xcassets in Resources */,
+				11BFD32A23476C0F008123C5 /* ContactsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,15 +446,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BFD30F23475E7E008123C5 /* NetworkManager.swift in Sources */,
+				11BFD32823476C0F008123C5 /* ContactsProtocols.swift in Sources */,
+				11BFD32723476C0F008123C5 /* ContactsViewController.swift in Sources */,
 				11BFD2F9234750FE008123C5 /* Localized+Runtime.swift in Sources */,
+				11BFD32623476C0F008123C5 /* ContactsRouter.swift in Sources */,
+				11BFD32923476C0F008123C5 /* ContactsInteractor.swift in Sources */,
 				11BFD30823475E3B008123C5 /* StaticHeaderPlugin.swift in Sources */,
+				11BFD319234767F2008123C5 /* BaseView.swift in Sources */,
 				11BFD2FB23475149008123C5 /* Localized.swift in Sources */,
+				11BFD32523476C0F008123C5 /* ContactsPresenter.swift in Sources */,
+				11BFD31B23476805008123C5 /* BaseViewController.swift in Sources */,
 				844B9283223766DB00BF79DE /* ContactsListViewController.swift in Sources */,
+				11BFD31D234769C6008123C5 /* Loader.swift in Sources */,
 				11BFD2E72347488A008123C5 /* Environment.swift in Sources */,
 				8412B6C821FFFD7D00EA728D /* AppDelegate.swift in Sources */,
 				846137C5220555E9009194EA /* ContactDetailsViewController.swift in Sources */,
 				11BFD30423475CE8008123C5 /* KeyValuePersistence.swift in Sources */,
 				11BFD3152347669E008123C5 /* AppNavigationController.swift in Sources */,
+				11BFD317234767E2008123C5 /* BaseProtocol.swift in Sources */,
 				11BFD30A23475E50008123C5 /* NetworkDefaults.swift in Sources */,
 				11BFD30C23475E61008123C5 /* NetworkError.swift in Sources */,
 				11BFD313234765A3008123C5 /* Container.swift in Sources */,
