@@ -33,8 +33,8 @@ extension ContactService: TargetType {
             return "/contacts.json"
         case .readContactByUrl:
             return ""
-        case .favoriteContactById(let Id):
-            return "/contacts/\(Id).json" .removingPercentEncoding!
+        case .favoriteContactById(Id: let id, isFavorite: _):
+            return "/contacts/\(id).json"
         }
     }
     
@@ -60,7 +60,7 @@ extension ContactService: TargetType {
             return .requestPlain
         case .favoriteContactById(let id, let isFavorite):
             return .requestParameters(parameters: ["id": id,"favorite": isFavorite,
-            ], encoding: URLEncoding.queryString)
+            ], encoding: JSONEncoding.default)
         }
     }
     
