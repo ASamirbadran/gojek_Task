@@ -20,7 +20,7 @@ class EditContactViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var contactImage: UIImageView!
-    @IBOutlet weak private var contactName: UILabel!
+    @IBOutlet weak var contactName: UILabel!
     @IBOutlet weak private var contactEmailTextField: UITextField!
     @IBOutlet weak private var contactPhoneTextField: UITextField!
     @IBOutlet weak private var contactCard: UIView!

@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddContactViewController" customModule="Contacts" customModuleProvider="target">
             <connections>
                 <outlet property="contactCard" destination="Zgc-6k-Qzg" id="SOd-pY-S6R"/>
-                <outlet property="contactEmailTextField" destination="zqK-lN-jIu" id="blj-0W-nx3"/>
+                <outlet property="contactEmailTextField" destination="aE1-Lz-HiT" id="YGf-ro-Ohl"/>
                 <outlet property="contactFirsNameTextField" destination="uSC-JC-Rem" id="xhM-Ot-wyV"/>
                 <outlet property="contactImage" destination="oQK-yD-fta" id="sk4-zx-jJv"/>
                 <outlet property="contactLastNameTextField" destination="9hh-e8-4GJ" id="f8U-ya-wuc"/>
-                <outlet property="contactPhoneTextField" destination="aE1-Lz-HiT" id="QEI-HF-M7u"/>
+                <outlet property="contactPhoneTextField" destination="zqK-lN-jIu" id="t6J-dM-aJF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

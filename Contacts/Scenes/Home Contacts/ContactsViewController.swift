@@ -14,6 +14,7 @@ class ContactsViewController: BaseViewController {
     internal var presenter: ContactsPresenterProtocol?
 
     // MARK: - Private Variables
+     var test = "lol"
 
     // MARK: - Computed Variables
 

@@ -19,11 +19,11 @@ class AddContactViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var contactImage: UIImageView!
-    @IBOutlet weak private var contactEmailTextField: UITextField!
-    @IBOutlet weak private var contactPhoneTextField: UITextField!
-    @IBOutlet weak private var contactCard: UIView!
-    @IBOutlet weak private var contactLastNameTextField: UITextField!
-    @IBOutlet weak private var contactFirsNameTextField: UITextField!
+    @IBOutlet weak var contactEmailTextField: UITextField!
+    @IBOutlet weak var contactPhoneTextField: UITextField!
+    @IBOutlet weak var contactCard: UIView!
+    @IBOutlet weak var contactLastNameTextField: UITextField!
+    @IBOutlet weak var contactFirsNameTextField: UITextField!
     // MARK: - Custom Setter
     public func setPresenter (presenter: AddContactPresenterProtocol) {
         self.presenter = presenter
