@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import IQKeyboardManagerSwift
 
 extension AppDelegate {
     
@@ -23,5 +24,11 @@ extension AppDelegate {
         let homeVc = Container.embedVCInNavController(Container.getHomeScreen())
         self.window?.rootViewController = homeVc
         self.window?.makeKeyAndVisible()
+    }
+    
+    func setUpKeyboard() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
     }
 }

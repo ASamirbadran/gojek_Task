@@ -50,6 +50,14 @@ class Container {
          return editContactVC
      }
     
+    class func getAddContactScreen() -> AddContactViewController {
+        guard let addContactVC = AddContactRouter.createModule() as? AddContactViewController else {
+            return AddContactViewController()
+        }
+        addContactVC.editExtendedView()
+        return addContactVC
+    }
+    
 }
 
 

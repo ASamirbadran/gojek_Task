@@ -10,6 +10,8 @@ target 'Contacts' do
   pod 'Moya'
   pod 'SwiftMessages'
   pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
+
 
 
 

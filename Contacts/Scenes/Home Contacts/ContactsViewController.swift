@@ -33,6 +33,7 @@ extension ContactsViewController {
         presenter?.viewDidLoad?()
         setupNavigationBar(title: "Contacts")
         setupContactsTableView()
+        addAddButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +50,10 @@ extension ContactsViewController {
 
 // MARK: - Selectors
 extension ContactsViewController {
+    @objc
+    func addWasTapped() {
+        self.navigationController?.pushViewController(Container.getAddContactScreen(), animated: true)
+    }
 
 }
 
@@ -64,6 +69,10 @@ extension ContactsViewController {
         contactsTableView.separatorStyle = .none
     }
 
+    func addAddButton() {
+        let addBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addWasTapped))
+           self.navigationItem.rightBarButtonItem  = addBarButtonItem
+       }
 }
 
 // MARK: - Protocal

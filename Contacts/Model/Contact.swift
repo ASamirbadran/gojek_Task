@@ -43,5 +43,17 @@ struct Contact : Codable {
         phoneNumber = try values.decodeIfPresent(String.self, forKey: .phoneNumber)
         email = try values.decodeIfPresent(String.self, forKey: .email)
     }
+    
+    //for saving contact
+    init(fname: String, lname: String, email: String, phone: String) {
+        self.email = email
+        self.firstName = fname
+        self.lastName = lname
+        self.phoneNumber = phone
+        self.profilePic = nil
+        self.url = nil
+        self.favorite = nil
+        self.id = nil
+    }
 
 }

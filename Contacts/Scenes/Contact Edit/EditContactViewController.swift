@@ -9,23 +9,24 @@
 import UIKit
 
 class EditContactViewController: BaseViewController {
-
+    
     // MARK: - Public Variables
     internal var presenter: EditContactPresenterProtocol?
-
+    
     // MARK: - Private Variables
-     var contactToEdit: ContactViewModel?
+    var contactToEdit: ContactViewModel?
+    
+    // MARK: - Computed Variables
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var contactImage: UIImageView!
     @IBOutlet weak private var contactName: UILabel!
     @IBOutlet weak private var contactEmailTextField: UITextField!
     @IBOutlet weak private var contactPhoneTextField: UITextField!
     @IBOutlet weak private var contactCard: UIView!
     @IBOutlet weak private var contactLastNameTextField: UITextField!
     @IBOutlet weak private var contactFirsNameTextField: UITextField!
-    // MARK: - Computed Variables
-
-    // MARK: - IBOutlets
-
-    @IBOutlet weak var contactImage: UIImageView!
+    
     // MARK: - Custom Setter
     public func setPresenter (presenter: EditContactPresenterProtocol) {
         self.presenter = presenter
@@ -45,7 +46,7 @@ extension EditContactViewController {
 
 // MARK: - IBActions
 extension EditContactViewController {
-
+    
 }
 
 // MARK: - Selectors
@@ -78,10 +79,10 @@ extension EditContactViewController {
         }
     }
     func addDoneButton() {
-
-          let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneWasTapped))
-          self.navigationItem.rightBarButtonItem  = doneBarButtonItem
-      }
+        
+        let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneWasTapped))
+        self.navigationItem.rightBarButtonItem  = doneBarButtonItem
+    }
 }
 
 // MARK: - Protocal

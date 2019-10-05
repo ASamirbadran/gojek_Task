@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         initNetwork()
         openHomeScreen()
+        setUpKeyboard()
         return true
     }
 
