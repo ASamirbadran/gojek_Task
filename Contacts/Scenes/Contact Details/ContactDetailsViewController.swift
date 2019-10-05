@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ContactDetailsViewController: BaseViewController {
 
@@ -53,6 +54,8 @@ extension ContactDetailsViewController {
 // MARK: - IBActions
 extension ContactDetailsViewController {
     @IBAction func messageButtonDidTapped(_ sender: Any) {
+        guard let number = URL(string: "sms:" + (presenter?.fetchedContact.phoneNumber ?? "")) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler: nil)
         
      }
      @IBAction func favoriteButtonDidTapped(_ sender: Any) {
@@ -61,6 +64,16 @@ extension ContactDetailsViewController {
     
      
      @IBAction func emailButtonDidTapped(_ sender: Any) {
+        let email = presenter?.fetchedContact.email ?? ""
+        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([email])
+            present(mail, animated: true, completion: nil)
+        } else {
+            print("Cannot send mail")
+        }
         
      }
      @IBAction func callButtonDidTapped(_ sender: Any) {
@@ -125,4 +138,24 @@ extension ContactDetailsViewController: ContactDetailsViewProtocol {
     }
     
 
+}
+
+
+
+extension ContactDetailsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result.rawValue {
+        case MFMailComposeResult.cancelled.rawValue:
+            print("Cancelled")
+        case MFMailComposeResult.saved.rawValue:
+            print("Saved")
+        case MFMailComposeResult.sent.rawValue:
+            print("Sent")
+        case MFMailComposeResult.failed.rawValue:
+            print("Error: \(String(describing: error?.localizedDescription))")
+        default:
+            break
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

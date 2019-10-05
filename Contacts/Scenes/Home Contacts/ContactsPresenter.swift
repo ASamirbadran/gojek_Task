@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit //TEST FOR NOW ------
 
 class ContactsPresenter: NSObject {
 
@@ -15,7 +14,6 @@ class ContactsPresenter: NSObject {
     internal var interactor: ContactsInteractorInputProtocol?
     private var router: ContactsWireframeProtocol?
     var contactaListViewModels = [ContactViewModel] ()
-    
     var contactTableSections: [ContactTableSection] = []
 
 
@@ -58,18 +56,8 @@ extension ContactsPresenter: ContactsPresenterProtocol {
         mapDataToSections(contactListViewModels: contactaListViewModels)
     }
     func mapDataToSections(contactListViewModels: [ContactViewModel]) {
-        let sortedContacts = contactListViewModels.sorted(by: { $0.fullName < $1.fullName })
-
-        let sectionTitles = UILocalizedIndexedCollation.current().sectionTitles
-
-        var calculatingSections: [ContactTableSection] = []
-
-        for title in sectionTitles {
-            let contacts = sortedContacts.filter({ $0.fullName.capitalized.hasPrefix(title)})
-            let section = ContactTableSection(sectionTitle: title, contacts: contacts)
-            calculatingSections.append(section)
-        }
-        self.contactTableSections = calculatingSections
+       
+        self.contactTableSections = SortTableSections.sortContacBySection(contactListViewModels: contactListViewModels)
         view?.reloadData()
     }
 }
