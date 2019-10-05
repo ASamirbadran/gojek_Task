@@ -17,7 +17,7 @@ class ContactDetailsViewController: BaseViewController {
     // MARK: - Private Variables
     var userDetailsUrl: String?
     var isContactFavorite: Bool?
-    
+    var editBarButtonItem: UIBarButtonItem?
     // MARK: - Computed Variables
 
     // MARK: - IBOutlets
@@ -47,7 +47,11 @@ extension ContactDetailsViewController {
         setupNavigationBar(title: "")
         setUpUi()
         addEditButton()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         presenter?.getUserDetails(url: userDetailsUrl ?? "" )
+
     }
 }
 
@@ -86,7 +90,11 @@ extension ContactDetailsViewController {
 extension ContactDetailsViewController {
     @objc
     func editWasTapped() {
-    
+        guard let contact = presenter?.fetchedContact else {
+            return
+        }
+        presenter?.editContact(contact: contact)
+
     }
 }
 
@@ -109,21 +117,11 @@ extension ContactDetailsViewController {
     }
     func addEditButton() {
 
-        let editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editWasTapped))
+        editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editWasTapped))
         self.navigationItem.rightBarButtonItem  = editBarButtonItem
+        editBarButtonItem?.isEnabled = false
     }
     
-   func loadContactImage(imageUrl: String) {
-        let imageUrl = URL(string: imageUrl)
-        self.contactImageView.kf.setImage(
-            with: imageUrl,
-            placeholder: Asset.placeholderPhoto.image,
-            options: [
-                .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(1)),
-                .cacheOriginalImage
-            ])
-    }
 
 }
 
@@ -133,8 +131,10 @@ extension ContactDetailsViewController: ContactDetailsViewProtocol {
         self.phoneNumberLabel.text = fetchedContact.phoneNumber
         self.emailLabel.text = fetchedContact.email
         checkIsFavorite(isFavorite: fetchedContact.favorite ?? false)
-        loadContactImage(imageUrl: fetchedContact.profilePic ?? "")
+        contactImageView.loadContactImage(imageUrl: fetchedContact.profilePic ?? "")
         self.contactName.text = fetchedContact.firstName ?? ""
+        editBarButtonItem?.isEnabled = true
+
     }
     
 

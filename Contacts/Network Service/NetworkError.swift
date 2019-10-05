@@ -47,3 +47,17 @@ extension NetworkError {
         return error
     }()
 }
+
+
+struct apiError : Codable {
+    let errors : [String]?
+    enum CodingKeys: String, CodingKey {
+
+        case errors = "errors"
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        errors = try values.decodeIfPresent([String].self, forKey: .errors)
+    }
+
+}

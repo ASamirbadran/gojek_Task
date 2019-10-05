@@ -10,6 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditContactViewController" customModule="Contacts" customModuleProvider="target">
             <connections>
+                <outlet property="contactCard" destination="wFv-I2-Sng" id="Cqo-Tg-2HE"/>
+                <outlet property="contactEmailTextField" destination="Nrt-dd-xbR" id="Ep7-mV-ca5"/>
+                <outlet property="contactFirsNameTextField" destination="FLS-VE-z33" id="ASG-hi-e6L"/>
+                <outlet property="contactImage" destination="wog-TN-RVX" id="U8e-5T-v0R"/>
+                <outlet property="contactLastNameTextField" destination="8wd-ev-APd" id="LLE-sm-UMS"/>
+                <outlet property="contactName" destination="pgz-rl-CjM" id="mJc-Dp-OYX"/>
+                <outlet property="contactPhoneTextField" destination="Y9G-Sb-YBP" id="4cJ-FB-H3a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,11 +45,17 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUt-KU-ape">
+                                    <rect key="frame" x="196.66666666666666" y="69" width="41" height="41"/>
+                                    <state key="normal" image="camera_button"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="dUt-KU-ape" firstAttribute="trailing" secondItem="wog-TN-RVX" secondAttribute="trailing" id="2hb-X9-kiK"/>
                                 <constraint firstItem="wog-TN-RVX" firstAttribute="top" secondItem="wFv-I2-Sng" secondAttribute="top" constant="10" id="9c2-l8-zdj"/>
                                 <constraint firstAttribute="trailing" secondItem="pgz-rl-CjM" secondAttribute="trailing" constant="15" id="B2p-GC-zph"/>
+                                <constraint firstItem="dUt-KU-ape" firstAttribute="bottom" secondItem="wog-TN-RVX" secondAttribute="bottom" id="HBd-rY-9g3"/>
                                 <constraint firstItem="wog-TN-RVX" firstAttribute="centerX" secondItem="wFv-I2-Sng" secondAttribute="centerX" id="VDy-yk-MDJ"/>
                                 <constraint firstAttribute="height" constant="170" id="fZl-lW-DXb"/>
                                 <constraint firstItem="pgz-rl-CjM" firstAttribute="top" secondItem="wog-TN-RVX" secondAttribute="bottom" constant="10" id="u45-25-NjH"/>
@@ -222,6 +235,7 @@
         </view>
     </objects>
     <resources>
+        <image name="camera_button" width="41" height="41"/>
         <image name="placeholder_photo" width="126" height="126"/>
     </resources>
 </document>

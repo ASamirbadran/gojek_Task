@@ -10,11 +10,13 @@ import Foundation
 
 class ContactViewModel: NSObject {
     let id: Int
-    let firstName: String
-    let lastName: String
+    var firstName: String
+    var lastName: String
     let profilePic: String
     let favorite: Bool
     let url: String
+    var phoneNumber: String
+    var email: String
     
     let fullName: String
 
@@ -25,6 +27,17 @@ class ContactViewModel: NSObject {
         self.profilePic = (contact.profilePic ?? "")
         self.favorite = (contact.favorite ?? false)
         self.url = (contact.url ?? "")
+        self.phoneNumber = (contact.phoneNumber ?? "")
+        self.email = (contact.email ?? "")
+
         self.fullName = firstName + " " + lastName
     }
+    
+    func editContact(fname: String, lname: String, email: String, phone: String) {
+        self.firstName = fname
+        self.lastName = lname
+        self.phoneNumber = phone
+        self.email = email
+    }
+    
 }

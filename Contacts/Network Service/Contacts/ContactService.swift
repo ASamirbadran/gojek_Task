@@ -13,6 +13,7 @@ enum ContactService {
     case readContacts
     case readContactByUrl(url: String)
     case favoriteContactById(Id: Int, isFavorite: Bool)
+    case editContactById(modifiedContact: ContactViewModel)
 }
 
 extension ContactService: TargetType {
@@ -22,7 +23,7 @@ extension ContactService: TargetType {
             return URL(string: NetworkManager.shared.networkConfig?.baseUrl ?? "")!
         case .readContactByUrl(let url ):
             return URL(string: url )!
-       case .favoriteContactById:
+       case .favoriteContactById, .editContactById:
             return URL(string: NetworkManager.shared.networkConfig?.baseUrl ?? "")!
         }
     }
@@ -35,6 +36,9 @@ extension ContactService: TargetType {
             return ""
         case .favoriteContactById(Id: let id, isFavorite: _):
             return "/contacts/\(id).json"
+        case .editContactById(modifiedContact: let contact):
+            return "/contacts/\(contact.id).json"
+
         }
     }
     
@@ -42,14 +46,14 @@ extension ContactService: TargetType {
         switch self {
         case .readContacts, .readContactByUrl:
             return .get
-        case .favoriteContactById:
+        case .favoriteContactById, .editContactById:
             return .put
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .readContacts, .readContactByUrl, .favoriteContactById:
+        case .readContacts, .readContactByUrl, .favoriteContactById, .editContactById:
             return Data()
         }
     }
@@ -60,6 +64,15 @@ extension ContactService: TargetType {
             return .requestPlain
         case .favoriteContactById(let id, let isFavorite):
             return .requestParameters(parameters: ["id": id,"favorite": isFavorite,
+            ], encoding: JSONEncoding.default)
+        case .editContactById(let contact):
+            return .requestParameters(parameters:
+                ["id": contact.id,
+                 "favorite": contact.favorite,
+                 "first_name": contact.firstName,
+                 "last_name": contact.lastName,
+                 "email": contact.email,
+                 "phone_number": contact.phoneNumber
             ], encoding: JSONEncoding.default)
         }
     }

@@ -11,7 +11,7 @@ import Foundation
 class EditContactPresenter: NSObject {
 
     private weak var view: EditContactViewProtocol?
-    private var interactor: EditContactInteractorInputProtocol?
+    internal var interactor: EditContactInteractorInputProtocol?
     private var router: EditContactWireframeProtocol?
 
     init(interface: EditContactViewProtocol,
@@ -24,8 +24,22 @@ class EditContactPresenter: NSObject {
 
 }
 extension EditContactPresenter: EditContactPresenterProtocol {
+    func editContact(contact: ContactViewModel) {
+        view?.showLoadingIndicator?()
+        interactor?.submitNewContact(contact: contact)
+    }
+    
 
 }
 extension EditContactPresenter: EditContactInteractorOutputProtocol {
+    func errorSubmittingContact(title: String, errorMessage: String) {
+        view?.hideLoadingIndicator?()
+        view?.showToastMessage?(title: title, body: errorMessage)
+    }
+    
+    func contactSubmittedSuccessfully() {
+        view?.hideLoadingIndicator?()
+        view?.dismissVc()
+    }
 
 }

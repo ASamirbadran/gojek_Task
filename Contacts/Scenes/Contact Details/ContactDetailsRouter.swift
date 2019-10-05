@@ -32,5 +32,9 @@ class ContactDetailsRouter {
 }
 
 extension ContactDetailsRouter: ContactDetailsWireframeProtocol {
+    func getToEditScreen(contactToEdit: ContactViewModel) {
+        viewController?.navigationController?.pushViewController(Container.getEditContactScreen(contactToEdit: contactToEdit), animated: true)
+    }
+    
 
 }

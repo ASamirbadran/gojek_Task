@@ -19,6 +19,8 @@ class ContactDetailsInteractor {
 }
 
 extension ContactDetailsInteractor: ContactDetailsInteractorInputProtocol {
+
+    
     func saveIsFavorite(id: Int, isFavorite: Bool) {
         NetworkManager.shared?.setIsFavorite(Id: id, isFavorite: isFavorite,  completion: { (result: Result<Data, NetworkError>, statusCode) in
             switch result {

@@ -12,14 +12,15 @@ import Foundation
 
 protocol EditContactPresenterProtocol: BasePresenterProtocol {
 
-    //    var interactor: EditContactInteractorInputProtocol? { get set }
-
+    var interactor: EditContactInteractorInputProtocol? { get set }
+    func editContact(contact: ContactViewModel)
     /* ViewController -> Presenter */
 }
 
 protocol EditContactInteractorInputProtocol: class {
 
-    //    var presenter: EditContactInteractorOutputProtocol? { get set }
+    var presenter: EditContactInteractorOutputProtocol? { get set }
+    func submitNewContact(contact: ContactViewModel)
 
     /* Presenter -> Interactor */
 }
@@ -29,13 +30,16 @@ protocol EditContactInteractorInputProtocol: class {
 protocol EditContactInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+    func contactSubmittedSuccessfully()
+    func errorSubmittingContact(title: String, errorMessage: String)
 }
 
 // MARK: - Presenter -> ViewController
 
 protocol EditContactViewProtocol: BaseViewProtocal {
 
-    //    var presenter: EditContactPresenterProtocol? { get set }
+    var presenter: EditContactPresenterProtocol? { get set }
+    func dismissVc()
 
     /* Presenter -> ViewController */
 }
@@ -43,5 +47,4 @@ protocol EditContactViewProtocol: BaseViewProtocal {
 // MARK: - Router
 
 protocol EditContactWireframeProtocol: class {
-
 }

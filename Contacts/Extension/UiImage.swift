@@ -12,4 +12,16 @@ extension UIImageView {
            self.layer.cornerRadius = self.frame.size.height/2
            self.clipsToBounds = true
        }
+    
+    func loadContactImage(imageUrl: String) {
+         let imageUrl = URL(string: imageUrl)
+         self.kf.setImage(
+             with: imageUrl,
+             placeholder: Asset.placeholderPhoto.image,
+             options: [
+                 .scaleFactor(UIScreen.main.scale),
+                 .transition(.fade(1)),
+                 .cacheOriginalImage
+             ])
+     }
 }

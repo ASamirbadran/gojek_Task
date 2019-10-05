@@ -16,7 +16,9 @@ protocol ContactDetailsPresenterProtocol: BasePresenterProtocol {
     /* ViewController -> Presenter */
     func getUserDetails(url: String)
     func changeIsFavorite(isFavorite: Bool)
-    var fetchedContact: Contact { get }
+    var fetchedContact: ContactViewModel { get }
+    func editContact(contact: ContactViewModel)
+
 }
 
 protocol ContactDetailsInteractorInputProtocol: class {
@@ -54,5 +56,6 @@ protocol ContactDetailsViewProtocol: BaseViewProtocal {
 // MARK: - Router
 
 protocol ContactDetailsWireframeProtocol: class {
+    func getToEditScreen(contactToEdit: ContactViewModel)
 
 }

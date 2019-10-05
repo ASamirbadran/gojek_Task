@@ -13,7 +13,7 @@ class ContactDetailsPresenter: NSObject {
     private weak var view: ContactDetailsViewProtocol?
     internal var interactor: ContactDetailsInteractorInputProtocol?
     private var router: ContactDetailsWireframeProtocol?
-    private var contact: Contact!
+    private var contactViewModel: ContactViewModel?
     private var contactUrl: String = ""
 
     init(interface: ContactDetailsViewProtocol,
@@ -26,14 +26,19 @@ class ContactDetailsPresenter: NSObject {
 
 }
 extension ContactDetailsPresenter: ContactDetailsPresenterProtocol {
-    var fetchedContact: Contact {
-        return contact
+    func editContact(contact: ContactViewModel) {
+        router?.getToEditScreen(contactToEdit: contact)
+    }
+    
+    var fetchedContact: ContactViewModel {
+        return contactViewModel!
     }
     
     func changeIsFavorite(isFavorite: Bool) {
         view?.showLoadingIndicator?()
-        interactor?.saveIsFavorite(id: contact.id ?? 0, isFavorite: isFavorite)
-        
+        if let contactVm = contactViewModel {
+            interactor?.saveIsFavorite(id: contactVm.id, isFavorite: isFavorite)
+        }
     }
     
     func getUserDetails(url: String) {
@@ -60,7 +65,7 @@ extension ContactDetailsPresenter: ContactDetailsInteractorOutputProtocol {
     
     func userDetailsFetchedSuccessfully(fetchedContact: Contact) {
         view?.loadData(fetchedContact: fetchedContact)
-        self.contact = fetchedContact
+        self.contactViewModel = ContactViewModel(contact: fetchedContact)
         view?.hideLoadingIndicator?()
 
     }
