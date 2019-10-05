@@ -19,6 +19,19 @@ class ContactDetailsInteractor {
 }
 
 extension ContactDetailsInteractor: ContactDetailsInteractorInputProtocol {
+    func saveIsFavorite(id: Int, isFavorite: Bool) {
+        NetworkManager.shared?.setIsFavorite(Id: id, isFavorite: isFavorite,  completion: { (result: Result<Data, NetworkError>, statusCode) in
+            switch result {
+            case .success:
+                self.presenter?.isFavoritedSuccessfully()
+            case .failure(let error):
+                self.presenter?.errorSavingFavoriteState(
+                    title: L10n.error,
+                    errorMessage: "\(error.message ?? "smth went wrong") \(error.code ?? 0)")
+            }
+        })
+    }
+    
     func fetchUserDetails(url: String) {
         NetworkManager.shared?.getSpecificContact(url: url, completion: { (result: Result<Contact, NetworkError>, statusCode) in
             switch result {

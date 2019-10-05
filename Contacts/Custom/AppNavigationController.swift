@@ -22,6 +22,7 @@ class AppNavigationController: UINavigationController {
             UIColor.darkGray]
         self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.tintColor = UIColor(red: 80 / 255, green: 227 / 255, blue: 194 / 255, alpha: 1.0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

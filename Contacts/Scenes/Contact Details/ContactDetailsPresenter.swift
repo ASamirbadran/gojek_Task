@@ -13,6 +13,7 @@ class ContactDetailsPresenter: NSObject {
     private weak var view: ContactDetailsViewProtocol?
     internal var interactor: ContactDetailsInteractorInputProtocol?
     private var router: ContactDetailsWireframeProtocol?
+    private var contact: Contact!
 
     init(interface: ContactDetailsViewProtocol,
          interactor: ContactDetailsInteractorInputProtocol?,
@@ -24,6 +25,16 @@ class ContactDetailsPresenter: NSObject {
 
 }
 extension ContactDetailsPresenter: ContactDetailsPresenterProtocol {
+    var fetchedContact: Contact {
+        return contact
+    }
+    
+    func changeIsFavorite(isFavorite: Bool) {
+        view?.showLoadingIndicator?()
+        interactor?.saveIsFavorite(id: contact.id ?? 0, isFavorite: isFavorite)
+        
+    }
+    
     func getUserDetails(url: String) {
         view?.showLoadingIndicator?()
         interactor?.fetchUserDetails(url: url)
@@ -32,8 +43,20 @@ extension ContactDetailsPresenter: ContactDetailsPresenterProtocol {
 
 }
 extension ContactDetailsPresenter: ContactDetailsInteractorOutputProtocol {
+    func isFavoritedSuccessfully() {
+        //will call getuserdetails or change button stat
+        view?.hideLoadingIndicator?()
+        
+    }
+    
+    func errorSavingFavoriteState(title: String, errorMessage: String) {
+        view?.hideLoadingIndicator?()
+        view?.showToastMessage?(title: title, body: errorMessage)
+    }
+    
     func userDetailsFetchedSuccessfully(fetchedContact: Contact) {
         view?.loadData(fetchedContact: fetchedContact)
+        self.contact = fetchedContact
         view?.hideLoadingIndicator?()
 
     }

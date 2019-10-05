@@ -21,6 +21,9 @@ class ContactDetailsViewController: BaseViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var messageButton: UIButton!
+    @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak private var contactCardView: UIView!
     @IBOutlet weak private var contactImageView: UIImageView!
     @IBOutlet weak private var contactName: UILabel!
@@ -42,6 +45,7 @@ extension ContactDetailsViewController {
         presenter?.viewDidLoad?()
         setupNavigationBar(title: "")
         setUpUi()
+        addEditButton()
         presenter?.getUserDetails(url: userDetailsUrl ?? "" )
     }
 }
@@ -52,7 +56,20 @@ extension ContactDetailsViewController {
         
      }
      @IBAction func favoriteButtonDidTapped(_ sender: Any) {
-        
+//        let url = "http://gojek-contacts-app.herokuapp.com/contacts/\(presenter?.fetchedContact.id ?? 0).json"
+//
+//        var request = URLRequest(url: URL.init(string: url)!)
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.httpMethod = "PUT"
+//
+//        request.httpBody = try! JSONSerialization.data(withJSONObject: ["favorite": false, "id": presenter?.fetchedContact.id ?? 0], options: [])
+//
+//        let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) -> Void in
+//            print(request)
+//        }
+//
+//        task.resume()
+        presenter?.changeIsFavorite(isFavorite: true)
      }
     
      
@@ -60,13 +77,17 @@ extension ContactDetailsViewController {
         
      }
      @IBAction func callButtonDidTapped(_ sender: Any) {
-        
+        guard let number = URL(string: "tel://" + (presenter?.fetchedContact.phoneNumber ?? "")) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler: nil)
      }
 }
 
 // MARK: - Selectors
 extension ContactDetailsViewController {
-
+    @objc
+    func editWasTapped() {
+    
+    }
 }
 
 // MARK: - Private
@@ -84,7 +105,14 @@ extension ContactDetailsViewController {
             self.isContactFavorite = false
             self.favouriteButton.setImage(Asset.favouriteButton.image, for: .normal)
         }
+        
     }
+    func addEditButton() {
+
+        let editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editWasTapped))
+        self.navigationItem.rightBarButtonItem  = editBarButtonItem
+    }
+    
    func loadContactImage(imageUrl: String) {
         let imageUrl = URL(string: imageUrl)
         self.contactImageView.kf.setImage(

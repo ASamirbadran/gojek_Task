@@ -15,7 +15,8 @@ protocol ContactDetailsPresenterProtocol: BasePresenterProtocol {
     var interactor: ContactDetailsInteractorInputProtocol? { get set }
     /* ViewController -> Presenter */
     func getUserDetails(url: String)
-
+    func changeIsFavorite(isFavorite: Bool)
+    var fetchedContact: Contact { get }
 }
 
 protocol ContactDetailsInteractorInputProtocol: class {
@@ -24,6 +25,8 @@ protocol ContactDetailsInteractorInputProtocol: class {
 
     /* Presenter -> Interactor */
     func fetchUserDetails(url: String)
+    func saveIsFavorite(id: Int, isFavorite: Bool)
+
 }
 
 // MARK: - Interactor -> Presenter
@@ -33,6 +36,8 @@ protocol ContactDetailsInteractorOutputProtocol: class {
     /* Interactor -> Presenter */
     func userDetailsFetchedSuccessfully(fetchedContact: Contact)
     func errorFetchingContactDetails(title: String, errorMessage: String)
+    func isFavoritedSuccessfully()
+    func errorSavingFavoriteState(title: String, errorMessage: String)
 
 }
 
