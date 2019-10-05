@@ -31,10 +31,14 @@ extension ContactsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad?()
-        //getting contactList
-        presenter?.getContacts()
         setupNavigationBar(title: "Contacts")
         setupContactsTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //getting contactList
+        presenter?.getContacts()
     }
 }
 

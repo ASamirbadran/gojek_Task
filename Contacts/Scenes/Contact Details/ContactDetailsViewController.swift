@@ -56,20 +56,7 @@ extension ContactDetailsViewController {
         
      }
      @IBAction func favoriteButtonDidTapped(_ sender: Any) {
-//        let url = "http://gojek-contacts-app.herokuapp.com/contacts/\(presenter?.fetchedContact.id ?? 0).json"
-//
-//        var request = URLRequest(url: URL.init(string: url)!)
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.httpMethod = "PUT"
-//
-//        request.httpBody = try! JSONSerialization.data(withJSONObject: ["favorite": false, "id": presenter?.fetchedContact.id ?? 0], options: [])
-//
-//        let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) -> Void in
-//            print(request)
-//        }
-//
-//        task.resume()
-        presenter?.changeIsFavorite(isFavorite: true)
+        presenter?.changeIsFavorite(isFavorite: !(isContactFavorite ?? false))
      }
     
      

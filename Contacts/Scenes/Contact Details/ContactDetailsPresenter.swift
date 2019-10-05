@@ -14,6 +14,7 @@ class ContactDetailsPresenter: NSObject {
     internal var interactor: ContactDetailsInteractorInputProtocol?
     private var router: ContactDetailsWireframeProtocol?
     private var contact: Contact!
+    private var contactUrl: String = ""
 
     init(interface: ContactDetailsViewProtocol,
          interactor: ContactDetailsInteractorInputProtocol?,
@@ -37,6 +38,7 @@ extension ContactDetailsPresenter: ContactDetailsPresenterProtocol {
     
     func getUserDetails(url: String) {
         view?.showLoadingIndicator?()
+        self.contactUrl = url
         interactor?.fetchUserDetails(url: url)
     }
     
@@ -46,6 +48,8 @@ extension ContactDetailsPresenter: ContactDetailsInteractorOutputProtocol {
     func isFavoritedSuccessfully() {
         //will call getuserdetails or change button stat
         view?.hideLoadingIndicator?()
+        //fetch again
+        getUserDetails(url: contactUrl)
         
     }
     
